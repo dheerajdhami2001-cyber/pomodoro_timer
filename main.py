@@ -61,7 +61,9 @@ def count_down(count):
 
 window = tkinter.Tk()
 window.title("Clock")
-window.config(padx = 100 , pady = 50, bg = YELLOW)
+window.config(padx = 100 , pady = 50, bg = YELLOW)   #This behavior is an **exception** unique to the **root window (`tkinter.Tk()`)** or
+                                                     #a **toplevel window (`tkinter.Toplevel()`)**, where `padx` and `pady` in `config()` act 
+                                                     #like internal border padding for the entire window content.
 
 
 canvas = tkinter.Canvas(width = 200, height = 224, bg = YELLOW, highlightthickness=0)
